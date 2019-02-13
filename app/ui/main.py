@@ -7,5 +7,8 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     engine = QQmlApplicationEngine("qml/main.qml")
-    print(engine)
+    
+    # engine.addImportPath("qml/Controls/qmldir")
+
+    # print(engine)
     app.exec_()

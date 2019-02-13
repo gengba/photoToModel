@@ -5,6 +5,8 @@ import QtQuick.Layouts 1.1
 import QtQml.Models 2.2
 import QtQml 2.2
 import QtQuick.Dialogs 1.3
+import QtQuick.Scene3D 2.0
+import "Controls"
 
 
 Item {
@@ -15,15 +17,16 @@ Item {
             orientation: Qt.Vertical
             Layout.fillHeight: true
 
-            Rectangle {
-                border { width: 0.5 }
-                Layout.minimumWidth: 160
-                width: 200
+            Panel {
+                title: "images"
+                Layout.minimumWidth: 200
+                width: 220
                 
                 GridLayout {
                     Layout.preferredWidth: parent.width
                     columns: (Layout.preferredWidth / 100)
                     Layout.alignment: Qt.AlignHCenter
+                    rowSpacing: 10
                     
                     Item {
                         Layout.preferredWidth: 100
@@ -31,7 +34,7 @@ Item {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                                imgView.source = showImgs.source
+                                image.source = showImgs.source
                             }
                             ColumnLayout{
                                 Image {
@@ -53,7 +56,7 @@ Item {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                                imgView.source = showImgs_2.source
+                                image.source = showImgs_2.source
                             }
                             ColumnLayout{
                                 Image {
@@ -75,7 +78,7 @@ Item {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                                imgView.source = showImgs_3.source
+                                image.source = showImgs_3.source
                             }
                             ColumnLayout{
                                 Image {
@@ -97,7 +100,7 @@ Item {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                                imgView.source = showImgs_4.source
+                                image.source = showImgs_4.source
                             }
                             ColumnLayout{
                                 Image {
@@ -119,7 +122,7 @@ Item {
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
-                                imgView.source = showImgs_5.source
+                                image.source = showImgs_5.source
                             }
                             ColumnLayout{
                                 Image {
@@ -138,24 +141,31 @@ Item {
                 }
             }
         }
-        Rectangle {
-            border { width: 0.5 }
+        Panel {
+            title: "Image Viewer"
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.minimumWidth: 40
 
             Image {
-                id: imgView
-                // Layout.fillHeight: true
-                // Layout.fillWidth: true
+                id: image
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
-        Rectangle {
-            border { width: 0.5 }
+        Panel {
+            title: "3D Viewer"
             width: Math.round(parent.width * 0.45)
             Layout.minimumWidth: 40
+
+            Scene3D {
+                id: scene3D
+                anchors.fill: parent
+                cameraAspectRatioMode: Scene3D.AutomaticAspectRatio
+                hoverEnabled: true
+                aspects: ['logic', 'input']
+                focus: true
+            }
         }
     }
 }
