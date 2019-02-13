@@ -21,11 +21,12 @@ Item {
                 title: "images"
                 Layout.minimumWidth: 200
                 width: 220
+                leftPadding: 16
+                topPadding: 10
                 
                 GridLayout {
                     Layout.preferredWidth: parent.width
                     columns: (Layout.preferredWidth / 100)
-                    Layout.alignment: Qt.AlignHCenter
                     rowSpacing: 10
                     
                     Item {
@@ -46,6 +47,7 @@ Item {
                                 Label {
                                     text: "img_1.jpg"
                                     font.pointSize: 8 
+                                    Layout.alignment: Qt.AlignHCenter
                                 }
                             }
                         }
@@ -68,6 +70,7 @@ Item {
                                 Label {
                                     text: "img_1.jpg"
                                     font.pointSize: 8 
+                                    Layout.alignment: Qt.AlignHCenter
                                 }
                             }
                         }
@@ -90,6 +93,7 @@ Item {
                                 Label {
                                     text: "img_1.jpg"
                                     font.pointSize: 8 
+                                    Layout.alignment: Qt.AlignHCenter
                                 }
                             }
                         }
@@ -112,6 +116,7 @@ Item {
                                 Label {
                                     text: "img_1.jpg"
                                     font.pointSize: 8 
+                                    Layout.alignment: Qt.AlignHCenter
                                 }
                             }
                         }
@@ -134,6 +139,7 @@ Item {
                                 Label {
                                     text: "img_1.jpg"
                                     font.pointSize: 8 
+                                    Layout.alignment: Qt.AlignHCenter
                                 }
                             }
                         }
