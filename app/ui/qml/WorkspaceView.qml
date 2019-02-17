@@ -7,6 +7,7 @@ import QtQml 2.2
 import QtQuick.Dialogs 1.3
 import QtQuick.Scene3D 2.0
 import "Controls"
+import "Viewer3D"
 
 
 Item {
@@ -42,7 +43,7 @@ Item {
                                     id: showImgs
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxu.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/gxub.jpg"
                                 }
                                 Label {
                                     text: "img_1.jpg"
@@ -134,10 +135,10 @@ Item {
                                     id: showImgs_5
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxu.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/gxub2.PNG"
                                 }
                                 Label {
-                                    text: "img_1.jpg"
+                                    text: "img_5.jpg"
                                     font.pointSize: 8 
                                     Layout.alignment: Qt.AlignHCenter
                                 }
@@ -155,8 +156,12 @@ Item {
 
             Image {
                 id: image
+                width: parent.width
+                height: parent.height
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
+                fillMode: Image.PreserveAspectFit
+                asynchronous: true
             }
         }
         Panel {
@@ -167,10 +172,13 @@ Item {
             Scene3D {
                 id: scene3D
                 anchors.fill: parent
+                anchors.margins: 10
+                focus: true
+                aspects: ['logic', 'input']
                 cameraAspectRatioMode: Scene3D.AutomaticAspectRatio
                 hoverEnabled: true
-                aspects: ['logic', 'input']
-                focus: true
+
+                Viewer3D {}
             }
         }
     }

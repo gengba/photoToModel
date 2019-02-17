@@ -128,8 +128,8 @@ ApplicationWindow {
         leftPadding: 4
         rightPadding: 4
         ToolTip.toolTip.background: Rectangle {
-            color: activePalette.base
-            border.color: activePalette.mid
+            color: "lightslategray"
+            border.color: "black"
         }
         RowLayout {
             ToolButton {
@@ -160,8 +160,8 @@ ApplicationWindow {
         anchors.fill: parent
         orientation: Qt.Vertical
         ToolTip.toolTip.background: Rectangle {
-            color: activePalette.base
-            border.color: activePalette.mid
+            color: "lightslategray"
+            border.color: "black"
         }
 
         ColumnLayout {
