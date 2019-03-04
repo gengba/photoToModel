@@ -43,7 +43,7 @@ Item {
                                     id: showImgs
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxub.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/imgs/gxub.jpg"
                                 }
                                 Label {
                                     text: "img_1.jpg"
@@ -66,7 +66,7 @@ Item {
                                     id: showImgs_2
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxu_2.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/imgs/gxu_2.jpg"
                                 }
                                 Label {
                                     text: "img_1.jpg"
@@ -89,7 +89,7 @@ Item {
                                     id: showImgs_3
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxu_3.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/imgs/gxu_3.jpg"
                                 }
                                 Label {
                                     text: "img_1.jpg"
@@ -112,7 +112,7 @@ Item {
                                     id: showImgs_4
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxu.jpg"
+                                    source: "file:///C:/Users/gengba/Desktop/imgs/gxu.jpg"
                                 }
                                 Label {
                                     text: "img_1.jpg"
@@ -135,7 +135,7 @@ Item {
                                     id: showImgs_5
                                     Layout.preferredWidth: 80
                                     Layout.preferredHeight: 80
-                                    source: "file:///C:/Users/gengba/Desktop/gxub2.PNG"
+                                    source: "file:///C:/Users/gengba/Desktop/imgs/gxub2.PNG"
                                 }
                                 Label {
                                     text: "img_5.jpg"
@@ -153,6 +153,7 @@ Item {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.minimumWidth: 40
+            padding: 20
 
             Image {
                 id: image
@@ -174,7 +175,7 @@ Item {
                 anchors.fill: parent
                 anchors.margins: 10
                 focus: true
-                aspects: ['logic', 'input']
+                aspects: ['input', 'logic']
                 cameraAspectRatioMode: Scene3D.AutomaticAspectRatio
                 hoverEnabled: true
 

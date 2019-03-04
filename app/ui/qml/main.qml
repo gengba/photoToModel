@@ -10,7 +10,7 @@ import QtQuick.Dialogs 1.3
 
 ApplicationWindow {
     id: _window
-    title: "Test App"
+    title: "photoToModel"
     width: 1200
     height: 800
     visible: true

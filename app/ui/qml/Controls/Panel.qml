@@ -61,7 +61,7 @@ Page {
         id: footerPane
         topPadding: m.vPadding; bottomPadding: m.vPadding
         leftPadding: m.hPadding; rightPadding: m.hPadding
-        visible: footerLayout.childern.length > 0
+        // visible: footerLayout.childern.length > 0
         background: Rectangle { color: m.paneBackgroundColor }
 
         Item {
